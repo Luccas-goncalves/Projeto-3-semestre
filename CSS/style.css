@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+
+/*Layout*/
+body{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(180deg, #1D005B 20.31%, rgba(0, 229, 243, 0.5) 100%);
+
+}
+
+
+/*botões Login*/
+#lc{
+	width: 352px;
+	height: 77px;
+	margin: 132px 0 50px 0;
+
+}
+
+.loginCadastro{
+	margin-right: 30px;
+	font-family: 'Inter';
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	display: inline;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #D9D9D9;
+
+}
+
+.loginCadastro:hover{
+	color: #D9D9D9;
+}
+
+/* login */
+
+form{
+	display: block;
+	width: 480px;
+}
+
+.single-input{
+	width: 480px;
+	margin: 0 0 80px 0;
+	
+}
+
+.single-input label{
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
+}
+
+.single-input .input{
+	width: 480px;
+	padding: 5px;
+	color: white;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	outline: 0;
+	font-size: 20px;
+	position: absolute;
+	
+}
+
+.single-input .input:focus ~ label,
+.single-input .input:valid ~ label{
+	transform: translateY(-24px);
+	font-size: 13px;
+}
+
+#btnSenha{
+	cursor: pointer;
+	font-size: 25px;
+	margin-left: 380px;
+	color: white;
+	position: absolute;
+}
+
+.esqSenha{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	display: inline;
+	align-items: center;
+	text-transform: uppercase;
+	margin-right: 50px;
+	color: #FFFFFF;
+}
+
+
+
+/*btn entrar/cadastrar*/
+
+.btn{
+	width: 216.85px;
+	height: 56.65px;
+	color: #fff;
+	background: #6B03BD;
+	border-radius: 58px;
+	display: inline;
+}
+
+.btn:hover{
+	background: #50028e;
+}
+
+.botaoC{
+	width: 300px;
+	margin-left: 80px;
+}
+
+/*Logo*/
+
+
+
+.titulo{
+	font-family: 'Major Mono Display';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 70px;
+	line-height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+/*Media queries*/
+
+@media (max-width: 575.98px) { 
+
+	img{
+		display: none;
+	}
+
+	form{
+		display: block;
+		justify-content: center;
+		width: 200px;
+	}
+	.single-input .input{
+		width: 200px;
+	}
+	#btnSenha{
+		margin-left: 200px;
+	}
+
+}
+
+@media (max-width: 767.98px) {
+	
+}
+
+@media (max-width: 991.98px) { 
+	
+
+	#lc{
+	width: 452px;
+	height: 80px;
+	margin: 100px 0 50px 0;
+	display: flex;
+	justify-content: center;
+
+	}
+
+	.titulo{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: ;
+		padding-bottom: 50px;
+		
+	}
+
+	#logo{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	form{
+		display: block;
+		flex-direction: column;
+		justify-content: center;
+		width: 400px;
+		align-items: center;
+		padding: 30px;
+	}
+	.single-input .input{
+		width: 400px;
+	}
+	#btnSenha{
+		margin-left: 300px;
+	}
+	img{
+		display: none;
+	}
+
+	.esqSenha{
+		display: flex;
+		justify-content: center;
+		margin-left: 70px;
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	.btn{
+	width: 300px;
+	height: 56.65px;
+	color: #fff;
+	background: #6B03BD;
+	border-radius: 58px;
+	display: inline;
+	margin-left: 50px;
+}
+
+}
+
+@media (max-width: 1199.98px) { 
+
+}
+
+@media (max-width: 1399.98px) { 
+
+}
