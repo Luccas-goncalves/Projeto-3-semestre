@@ -23,7 +23,7 @@
 
 				<div id="logo">
 					<h1 class="titulo" >TaskList</h1>
-					<img  src="../img/logo.jpeg" width="200px" style="margin-right: 100px;" class="float-end mt-5 ">
+					<img  src="../img/logo.jpeg" width="200px" style="margin-right: 100px; border-radius:16px;" class="float-end mt-5 ">
 				</div>
 
 			<!-- formulário -->
