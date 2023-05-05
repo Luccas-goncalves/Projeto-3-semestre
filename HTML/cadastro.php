@@ -10,7 +10,8 @@
 
 		<script src="https://kit.fontawesome.com/c4bf745026.js" crossorigin="anonymous"></script>
 
-		<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/styleCadastro.css">
+		<link rel="icon" href="../img/icon.png">
 	</head>
 	<body>
 
@@ -23,7 +24,6 @@
 
 				<div id="logo">
 					<h1 class="titulo" >TaskList</h1>
-					<img  src="../img/logo.jpeg" width="200px" style="margin-right: 100px; border-radius:16px;" class="float-end mt-5 ">
 				</div>
 
 			<!-- formulário -->

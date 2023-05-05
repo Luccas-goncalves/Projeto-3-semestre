@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #1D005B 20.31%, rgba(0, 229, 243, 0.5) 100%);
+}
+
+h1{
+  font-family: 'Major Mono Display';
+  font-weight: 400;
+  font-size: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 80px;
+  padding: 10px;
+  line-height: 50px;
+}
+
+::selection{
+  color: #fff;
+  background: #3C87FF;
+}
+
+.conteudo{
+  max-width: 600px;
+  padding: 28px 0 30px;
+  margin: 137px auto;
+  background: #192734;
+  border-radius: 7px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.campo-tarefa{
+  height: 52px;
+  padding: 0 25px;
+  position: relative;
+}
+.campo-tarefa img{
+  top: 50%;
+  position: absolute;
+  transform: translate(17px, -50%);
+}
+.campo-tarefa input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 0 20px 0 53px;
+  border: 1px solid #999;
+}
+.campo-tarefa input:focus,
+.campo-tarefa input.ativo{
+  padding-left: 52px;
+  border: 2px solid #3C87FF;
+}
+.campo-tarefa input::placeholder{
+  color: black;
+}
+.menus, li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menus{
+  padding: 18px 25px;
+  border-bottom: 1px solid #ccc;
+}
+.filtros span{
+  margin: 0 8px;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+}
+.filtros span:first-child{
+  margin-left: 0;
+}
+.filtros span.ativo{
+  color: #3C87FF;
+}
+
+.menus .add-btn{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+  background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.menus .limpar-btn{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+  background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
+}
+.limpar-btn.ativo{
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.limpar-btn:ativo{
+  transform: scale(0.93);
+}
+.caixa-tarefas{
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+  color: #fff;
+}
+.caixa-tarefas.overflow{
+  overflow-y: auto;
+  max-height: 300px;
+}
+.caixa-tarefas::-webkit-scrollbar{
+  width: 5px;
+}
+.caixa-tarefas::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.caixa-tarefas::-webkit-scrollbar-thumb{
+  background: #e6e6e6;
+  border-radius: 25px;
+}
+.caixa-tarefas .tarefa{
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+}
+.caixa-tarefas .tarefa:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.caixa-tarefas .tarefa label{
+  display: flex;
+  align-items: flex-start;
+}
+.tarefa label input{
+  margin-top: 7px;
+  accent-color: #3C87FF;
+}
+.tarefa label p{
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+.tarefa label p.checked{
+  text-decoration: line-through #3C87FF 2px;
+}
+
+/*editar e remover*/
+.caixa-tarefas .configuracoes{
+  position: relative;
+}
+.configuracoes :where(i, li){
+  cursor: pointer;
+}
+.configuracoes .menu-tarefa{
+  z-index: 10;
+  right: -5px;
+  bottom: -65px;
+  padding: 5px 0;
+  background: #282828;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: top right;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+.caixa-tarefas .tarefa:last-child .menu-tarefa{
+  bottom: 0;
+  transform-origin: bottom right;
+}
+.caixa-tarefas .tarefa:first-child .menu-tarefa{
+  bottom: -65px;
+  transform-origin: top right;
+}
+.menu-tarefa.show{
+  transform: scale(1);
+}
+.menu-tarefa li{
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+.menu-tarefa li:last-child{
+  margin-bottom: 0;
+}
+.configuracoes li:hover{
+  background: #404040;
+}
+.configuracoes li i{
+  padding-right: 8px;
+}
+
+/*Media queries*/
+@media (max-width: 400px) {
+  body{
+    padding: 0 10px;
+  }
+  .conteudo {
+    padding: 20px 0;
+  }
+  .filtros span{
+    margin: 0 2px;
+  }
+  .campo-tarefa{
+    padding: 0 20px;
+  }
+  .menus{
+    padding: 18px 20px;
+  }
+  .caixa-tarefas{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 15px 10px 20px;
+  }
+  .tarefa label input{
+    margin-top: 4px;
+  }
+
+  .add-btn{
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767.98px){
+  .add-btn{
+    margin-right: 8px;
+  }
+}
